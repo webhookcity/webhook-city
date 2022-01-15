@@ -19,39 +19,15 @@ public class CatchController {
         this.requestService = requestService;
     }
 
-    @GetMapping("/**")
-    public String getAllGet(@RequestHeader Map<String, String> headers, HttpServletRequest request) {
-        requestService.catchRequest(RequestMethod.GET, null, headers, getUrl(request));
-        return "{}";
-    }
-
-    @PostMapping("/**")
-    public String getAllPost(@RequestBody(required = false)  String requestBody, @RequestHeader Map<String, String> headers, HttpServletRequest request) {
-        requestService.catchRequest(RequestMethod.POST, requestBody, headers, getUrl(request));
-        return "{}";
-    }
-
-    @PatchMapping("/**")
-    public String getAllPatch(@RequestBody(required = false) String requestBody, @RequestHeader Map<String, String> headers, HttpServletRequest request) {
-        requestService.catchRequest(RequestMethod.PATCH, requestBody, headers, getUrl(request));
+    @RequestMapping(value = "/**", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PATCH, RequestMethod.PUT, RequestMethod.DELETE})
+    public String getAllMethods(@RequestBody(required = false) String requestBody, @RequestHeader Map<String, String> headers, HttpServletRequest request) {
+        requestService.catchRequest(request.getMethod(), requestBody, headers, getUrl(request));
         return "{}";
     }
 
     @RequestMapping(method = {RequestMethod.HEAD}, value = "/**")
     public void getAllHead(@RequestHeader Map<String, String> headers, HttpServletRequest request) {
-        requestService.catchRequest(RequestMethod.HEAD, null, headers, getUrl(request));
-    }
-
-    @PutMapping("/**")
-    public String getAllPut(@RequestBody(required = false) String requestBody, @RequestHeader Map<String, String> headers, HttpServletRequest request) {
-        requestService.catchRequest(RequestMethod.PUT, requestBody, headers, getUrl(request));
-        return "{}";
-    }
-
-    @DeleteMapping("/**")
-    public String getAllDelete(@RequestBody(required = false) String requestBody, @RequestHeader Map<String, String> headers, HttpServletRequest request) {
-        requestService.catchRequest(RequestMethod.DELETE, requestBody, headers, getUrl(request));
-        return "{}";
+        requestService.catchRequest(request.getMethod(), null, headers, getUrl(request));
     }
 
     private String getUrl(HttpServletRequest request) {
