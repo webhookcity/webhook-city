@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "REQUESTS")
@@ -16,9 +17,14 @@ public class Request {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // TODO return the proper error message if a violation occurs
+    @Size(max=1000)
     private String url;
+    @Size(max=3000)
     private String headers;
+    @Size(max=10)
     private String method;
+    @Size(max=5000)
     private String body;
     
 }
