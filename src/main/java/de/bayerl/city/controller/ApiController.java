@@ -24,11 +24,6 @@ public class ApiController {
         this.requestDTOMapper = requestDTOMapper;
     }
 
-    @GetMapping("/api/v1/health")
-    public void getHealth() {
-        log.info("health");
-    }
-
     @GetMapping("/api/v1/requests")
     public List<RequestDTO> getAllRequests() {
         log.info("GET all");

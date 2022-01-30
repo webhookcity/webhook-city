@@ -22,7 +22,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-
     <build>
         <testResources>
             <testResource>
@@ -47,13 +46,22 @@
                 <version>${jib-maven-plugin.version}</version>
                 <configuration>
                     <from>
-                        <!-- TODO Use amazoncorretto:17.0.1-alpine ? -->
-                        <image>openjdk:alpine</image>
+                        <image>amazoncorretto:17.0.2</image>
+                        <platforms>
+                            <platform>
+                                <architecture>amd64</architecture>
+                                <os>linux</os>
+                            </platform>
+                            <platform>
+                                <architecture>arm64</architecture>
+                                <os>linux</os>
+                            </platform>
+                        </platforms>
                     </from>
                     <to>
-                        <image>bayerlsebastian/webhook-city</image>
+                        <image>bayerls/webhook-city</image>
                         <tags>
-                            <tag>0.0.5</tag>
+                            <tag>0.1.1</tag>
                             <tag>latest</tag>
                         </tags>
                     </to>
