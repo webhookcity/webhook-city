@@ -16,6 +16,7 @@
             <column  name="headers"  type="clob"/>
             <column  name="method"  type="varchar(10)"/>
             <column  name="body"  type="clob"/>
+            <column name="created_on" type="timestamp(6)" />
         </createTable>
     </changeSet>
 

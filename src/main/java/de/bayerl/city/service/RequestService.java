@@ -35,7 +35,7 @@ public class RequestService {
     public void catchRequest(String method, String body, Map<String, String> headers, String url) {
         log.info("Catch new request: " + method + " - URL: " + url);
         Gson gson = new Gson();
-        var request = new Request(null, url, gson.toJson(headers), method, body);
+        var request = new Request(null, url, gson.toJson(headers), method, body, null);
         requestDao.save(request);
     }
 

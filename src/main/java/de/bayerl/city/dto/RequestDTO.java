@@ -3,6 +3,7 @@ package de.bayerl.city.dto;
 import lombok.Builder;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 
 @Builder
@@ -14,4 +15,5 @@ public class RequestDTO {
     private Map<String, String> headers;
     private String method;
     private String body;
+    private LocalDateTime createdOn;
 }

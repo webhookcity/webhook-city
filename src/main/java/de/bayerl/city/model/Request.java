@@ -3,9 +3,11 @@ package de.bayerl.city.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "REQUESTS")
@@ -26,5 +28,10 @@ public class Request {
     private String method;
     @Size(max=5000)
     private String body;
+
+    @Column(name = "created_on")
+    @CreationTimestamp
+    private LocalDateTime createdOn;
+
     
 }

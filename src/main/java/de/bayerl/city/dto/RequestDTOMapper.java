@@ -26,6 +26,7 @@ public class RequestDTOMapper {
                 .body(request.getBody())
                 .url(request.getUrl())
                 .headers(gson.fromJson(request.getHeaders(), mapType))
+                .createdOn(request.getCreatedOn())
                 .build();
     }
 }
