@@ -1,7 +1,7 @@
-package de.bayerl.api;
+package com.webhookcity.api;
 
 import com.intuit.karate.junit5.Karate;
-import de.bayerl.city.WebhookApplication;
+import com.webhookcity.WebhookApplication;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.test.context.SpringBootTest;

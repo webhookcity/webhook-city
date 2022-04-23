@@ -1,4 +1,4 @@
-package de.bayerl.city.dto;
+package com.webhookcity.dto;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package de.bayerl.city.dao;
+package com.webhookcity.dao;
 
-import de.bayerl.city.model.Request;
+import com.webhookcity.model.Request;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

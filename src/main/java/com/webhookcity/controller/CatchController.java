@@ -1,6 +1,6 @@
-package de.bayerl.city.controller;
+package com.webhookcity.controller;
 
-import de.bayerl.city.service.RequestService;
+import com.webhookcity.service.RequestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

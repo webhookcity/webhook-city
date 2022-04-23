@@ -1,8 +1,8 @@
-package de.bayerl.city.dto;
+package com.webhookcity.dto;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import de.bayerl.city.model.Request;
+import com.webhookcity.model.Request;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Type;

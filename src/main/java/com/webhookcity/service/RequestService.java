@@ -1,15 +1,12 @@
-package de.bayerl.city.service;
+package com.webhookcity.service;
 
 import com.google.gson.Gson;
-import de.bayerl.city.dao.RequestDao;
-import de.bayerl.city.model.Request;
+import com.webhookcity.dao.RequestDao;
+import com.webhookcity.model.Request;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
-import javax.validation.Valid;
-import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.Map;
 

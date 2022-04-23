@@ -1,4 +1,4 @@
-package de.bayerl.city.model;
+package com.webhookcity.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
