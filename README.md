@@ -27,9 +27,20 @@ Not a mock or proxy.
 mvn compile jib:build
 ```
 
-# Dockerhub
+## Dockerhub
 
 Docker image can be found on [dockerhub webhookcity](https://hub.docker.com/repository/docker/webhookcity/webhookcity/general)
+
+## Github
+
+[github org and repo](https://github.com/webhookcity)
+
+## Run docker image 
+
+```zsh
+docker run -p 8080:8080 webhookcity/webhookcity
+```
+
 
 ## TODO
 
