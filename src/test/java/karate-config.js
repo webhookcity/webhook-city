@@ -2,7 +2,7 @@ function fn() {
     var port = karate.properties['local.server.port'];
 
     var config = { // base config JSON
-        localUrl:'http://localhost:' + port + '/api/v1',
+        localApi:'http://localhost:' + port,
         host: 'localhost:' + port
     };
 
