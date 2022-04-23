@@ -59,7 +59,7 @@
                         </platforms>
                     </from>
                     <to>
-                        <image>bayerls/webhook-city</image>
+                        <image>webhookcity/webhookcity</image>
                         <tags>
                             <tag>0.2.1</tag>
                             <tag>latest</tag>

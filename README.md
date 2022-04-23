@@ -27,6 +27,10 @@ Not a mock or proxy.
 mvn compile jib:build
 ```
 
+# Dockerhub
+
+Docker image can be found on [dockerhub webhookcity](https://hub.docker.com/repository/docker/webhookcity/webhookcity/general)
+
 ## TODO
 
 - enable https? 
@@ -35,11 +39,14 @@ mvn compile jib:build
 - configurable API path? (currently /api/v1/...)
 - small UI?
 - API documentation -> readme file
-- github public project
-- new dockerhub account?
+- github 
+  - public project
 - authentication for API endpoints?
 - max amount of webhooks in DB?
 - token bucket rate limiting?
 - mysql support?
-- timestamp when persisted
 - swagger documentation for API?
+- use alpine when image is available [link](https://github.com/corretto/corretto-docker/issues/46)
+- dockerhub
+  - add dockerhub description
+- add changelog
