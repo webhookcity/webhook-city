@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     console.log( "ready!" );
+    refreshRequests();
 
     $('#refreshRequests').click(function() {
         refreshRequests();

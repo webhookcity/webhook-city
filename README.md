@@ -64,4 +64,4 @@ docker run -p 8080:8080 webhookcity/webhookcity
 
 ## Third party
 
-- Favicon [Alien](https://favicon.io/emoji-favicons/alien) 
+- Favicon [Alien](https://favicon.io/emoji-favicons/alien) CC-BY 4.0. https://creativecommons.org/licenses/by/4.0/ 
