@@ -7,7 +7,7 @@
       "content-length": "11",
       "host": "",
       "connection": "Keep-Alive",
-      "user-agent": "Apache-HttpClient/4.5.13 (Java/18)",
+      "user-agent": "Apache-HttpClient/4.5.13 (Java/18.0.1)",
       "accept-encoding": "gzip,deflate"
     },
     "method": "POST",

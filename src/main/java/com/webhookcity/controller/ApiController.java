@@ -18,7 +18,6 @@ public class ApiController {
     private final RequestService requestService;
     private final RequestDTOMapper requestDTOMapper;
 
-    @Autowired
     public ApiController(RequestService requestService, RequestDTOMapper requestDTOMapper) {
         this.requestService = requestService;
         this.requestDTOMapper = requestDTOMapper;

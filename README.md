@@ -61,3 +61,7 @@ docker run -p 8080:8080 webhookcity/webhookcity
 - dockerhub
   - add dockerhub description
 - add changelog
+
+## Third party
+
+- Favicon [Alien](https://favicon.io/emoji-favicons/alien) 

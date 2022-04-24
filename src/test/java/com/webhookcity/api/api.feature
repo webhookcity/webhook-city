@@ -83,5 +83,4 @@ Feature: API Tests
     Given path pathRequests
     When method get
     Then status 200
-    * print response
     And match response == '#[6]'

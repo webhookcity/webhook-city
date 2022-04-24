@@ -14,7 +14,6 @@ public class CatchController {
 
     private final RequestService requestService;
 
-    @Autowired
     public CatchController(RequestService requestService) {
         this.requestService = requestService;
     }

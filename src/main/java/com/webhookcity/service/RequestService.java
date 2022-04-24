@@ -16,7 +16,6 @@ public class RequestService {
 
     private final RequestDao requestDao;
 
-    @Autowired
     public RequestService(RequestDao requestDao) {
         this.requestDao = requestDao;
     }
