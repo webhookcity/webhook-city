@@ -12,54 +12,56 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-
-    <!-- Custom styles for this template -->
-    <link href="sidebars.css" rel="stylesheet">
 </head>
 <body>
 
-<main>
 
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100vh;">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-            <img src="img/alien-logo.png" height="40px" style="padding-right: 10px"/>
-            <span class="fs-4">webhook-city</span>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img alt="logo" src="img/alien-logo.png" height="40px" style="padding-right: 10px"/>
+            webhook-city
         </a>
-        <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item"  id="refreshRequests">
-                <a href="#" class="nav-link text-white">
-                    <i class="bi me-2 bi-recycle"></i>
-                    Refresh
-                </a>
-            </li>
-            <li id="deleteRequests">
-                <a href="#" class="nav-link text-white">
-                    <i class="bi me-2 bi-trash"></i>
-                    Delete
-                </a>
-            </li>
-        </ul>
-        <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item" id="testGet">
-                <a href="#" class="nav-link text-white" aria-current="page">
-                    <i class="bi me-2 bi-arrow-up-right-circle"></i>
-                    Trigger GET
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-white" id="testPost">
-                    <i class="bi me-2 bi-arrow-up-right-circle"></i>
-                    Trigger POST
-                </a>
-            </li>
-        </ul>
-    </div>
-    List:
-    <ol id="eventList"></ol>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" id="refreshRequests">
+                    <a href="#" class="nav-link">
+                        <i class="bi me-2 bi-recycle"></i>
+                        Refresh
+                    </a>
+                </li>
+                <li id="deleteRequests">
+                    <a href="#" class="nav-link">
+                        <i class="bi me-2 bi-trash"></i>
+                        Delete
+                    </a>
+                </li>
 
-</main>
+                <li class="nav-item" id="testGet">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="bi me-2 bi-arrow-up-right-circle"></i>
+                        Trigger GET
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link" id="testPost">
+                        <i class="bi me-2 bi-arrow-up-right-circle"></i>
+                        Trigger POST
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <ol id="eventList" class="list-group" style="padding-top: 10px"></ol>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
