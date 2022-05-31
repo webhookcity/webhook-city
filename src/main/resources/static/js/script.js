@@ -28,23 +28,41 @@ function refreshRequests() {
 
         console.log(data);
 
-        $("#eventList").empty();
+        $("#accordion").empty();
+
         $.each(data, function (key, val) {
 
+            // Accordion
+            let accordionItem = `<div class="accordion-item">
+                <h2 class="accordion-header" id="heading-$id">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-$id">
+                        $itemHeader
+                    </button>
+                </h2>
+                <div id="collapse-$id" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        $itemBody
+                    </div>
+                </div>
+            </div>`;
 
-            let item = "<li id='" + key + "' class='list-group-item'><ul>"
-            item += "<li>" + val.id + " -- " + val.createdOn + "</li>";
-            item += "<li>" + val.method + " -- " + val.url + "</li>";
 
-            item += "<li><ol>";
+            const header = val.id + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                + val.method + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                + val.createdOn + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                + val.url;
+
+            let body = "<b>Headers:</b><ol>";
             $.each(val.headers, function (key, val) {
-                item += "<li>" + key + " : " + val + "</li>"
+                body += "<li><b>" + key + "</b> : " + val + "</li>"
             });
-            item += "</ol></li>";
-            item += "</ul></li>"
+            body += "</ol>";
 
-
-            $("#eventList").append(item);
+            accordionItem = accordionItem.replace("$itemHeader", header);
+            accordionItem = accordionItem.replaceAll("$id", val.id)
+            accordionItem = accordionItem.replace("$itemBody", body);
+            $("#accordion").append(accordionItem);
         });
     });
 }
@@ -62,7 +80,7 @@ function deleteRequests() {
 
 function testGet() {
     $.ajax({
-        url: '/catch/lala/test-get',
+        url: '/catch/ui-test/get',
         type: 'GET',
         success: function (result) {
             console.log("test GET done");
@@ -73,7 +91,7 @@ function testGet() {
 
 function testPost() {
     $.ajax({
-        url: '/catch/lala/test-post',
+        url: '/catch/ui-test/post',
         type: 'GET',
         success: function (result) {
             console.log("test POST done");
