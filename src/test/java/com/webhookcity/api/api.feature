@@ -3,6 +3,7 @@ Feature: API Tests
   Background:
     * url localApi
     * def pathRequests = '/api/v1/requests'
+    * def pathHealth = '/api/v1/health'
     * configure headers = { 'Content-Type': 'application/json' }
 
   Scenario: Catch a post and verify
@@ -84,3 +85,8 @@ Feature: API Tests
     When method get
     Then status 200
     And match response == '#[6]'
+
+  Scenario: Health
+    Given path pathHealth
+    When method get
+    Then status 200

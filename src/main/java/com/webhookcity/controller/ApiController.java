@@ -35,4 +35,10 @@ public class ApiController {
         requestService.deleteAllRequests();
     }
 
+    @GetMapping("/api/v1/health")
+    public String getHealth() {
+        log.info("Health");
+        return "{}";
+    }
+
 }
