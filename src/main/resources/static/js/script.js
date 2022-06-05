@@ -42,7 +42,14 @@ function refreshRequests() {
                 </h2>
                 <div id="collapse-$id" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        $itemBody
+                        <b>Headers:</b>
+                        
+                        <ol>
+                            $itemBody
+                        </ol>
+                        
+                        <b>Body:</b>
+                         <pre><code>$requestBody</code></pre>
                     </div>
                 </div>
             </div>`;
@@ -53,18 +60,25 @@ function refreshRequests() {
                 + val.createdOn + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                 + val.url;
 
-            let body = "<b>Headers:</b><ol>";
+            let body = "";
             $.each(val.headers, function (key, val) {
                 body += "<li><b>" + key + "</b> : " + val + "</li>"
             });
-            body += "</ol>";
+
+            let parsed = JSON.parse(val.body);
+            let requestBody = JSON.stringify(parsed, null, 2);
 
             accordionItem = accordionItem.replace("$itemHeader", header);
             accordionItem = accordionItem.replaceAll("$id", val.id)
             accordionItem = accordionItem.replace("$itemBody", body);
+            accordionItem = accordionItem.replace("$requestBody", requestBody);
             $("#accordion").append(accordionItem);
         });
+
+        hljs.highlightAll();
     });
+
+
 }
 
 function deleteRequests() {
@@ -92,7 +106,10 @@ function testGet() {
 function testPost() {
     $.ajax({
         url: '/catch/ui-test/post',
-        type: 'GET',
+        type: 'POST',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: '{"body": "test"}',
         success: function (result) {
             console.log("test POST done");
             refreshRequests();
