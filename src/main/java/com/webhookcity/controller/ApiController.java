@@ -2,6 +2,7 @@ package com.webhookcity.controller;
 
 import com.webhookcity.dto.RequestDTOMapper;
 import com.webhookcity.dto.RequestDTO;
+import com.webhookcity.model.Health;
 import com.webhookcity.service.RequestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +37,9 @@ public class ApiController {
     }
 
     @GetMapping("/api/v1/health")
-    public String getHealth() {
+    public Health getHealth() {
         log.info("Health");
-        return "{}";
+        return new Health();
     }
 
 }
