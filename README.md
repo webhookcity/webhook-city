@@ -16,6 +16,8 @@ by **webhook-city**. There is also a simple UI, that will help you understand wh
 
 This project is inspired and similar to [MailHog](https://github.com/mailhog/MailHog).
 
+In the end, this is a dockerized application that you need to self-host, that gives you basic functionality like [requestbin.com](https://requestbin.com/) or [webhook.site](https://webhook.site/).
+
 ## What is this not?
 
 - It is **not a mock**, meaning you cannot define what response will be returned.
