@@ -71,3 +71,9 @@ Released under MIT license, see [LICENSE](https://github.com/bayerls/webhook-cit
 ## Third party 
 
 - Favicon and logo [Alien](https://favicon.io/emoji-favicons/alien)
+
+## How To Build
+
+```
+mvn compile jib:build
+```

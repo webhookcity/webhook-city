@@ -1,11 +1,10 @@
 package com.webhookcity.controller;
 
-import com.webhookcity.dto.RequestDTOMapper;
 import com.webhookcity.dto.RequestDTO;
+import com.webhookcity.dto.RequestDTOMapper;
 import com.webhookcity.model.Health;
 import com.webhookcity.service.RequestService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
